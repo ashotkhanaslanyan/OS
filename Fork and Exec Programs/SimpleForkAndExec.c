@@ -12,7 +12,7 @@ int main() {
         perror("fork");
     }
     else if (!pid) {
-        printf("Executing ls command \n");
+        printf("Executing command ls\n");
         ret = execl("/bin/ls", "ls", NULL);
         if (ret < 0) {
             perror("execl");
@@ -20,7 +20,7 @@ int main() {
     }
     else if (pid > 0) {
         wait(NULL);
-        printf("Parent process done \n");
+        printf("Parent process done\n");
     }
 
     return 0;
