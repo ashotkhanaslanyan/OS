@@ -6,7 +6,7 @@ int main() {
 
 	pid_t fork1, fork2, fork3;
 
-	printf("Im Initial Parent! PID:%d\n", getpid());
+	printf("Im Initial process! PID:%d, with parent: %d\n", getpid(), getppid());
 
 	fork1 = fork();
 	if (!fork1) {
@@ -41,7 +41,7 @@ int main() {
 		perror("fork");
 	}
 
-	printf("I'm the  Parent after 3 forks! PID:%d\n", getpid());
+	printf("I'm the  process after 3 forks! PID:%d\n", getpid());
 
 	return 0;
 }
