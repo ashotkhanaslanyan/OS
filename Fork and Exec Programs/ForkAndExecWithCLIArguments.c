@@ -13,7 +13,7 @@ int main() {
     }
     else if (!pid) {
         printf("Executing command grep\n");
-        ret = execl("/bin/grep", "grep", "-n", "main", "Source/test.txt", (char *)NULL);
+        ret = execl("/bin/grep", "grep", "-n", "main", "Source/test.txt", NULL);
         if (ret < 0) {
             perror("execl");
         }
