@@ -2,7 +2,6 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include <sys/wait.h>
 
 int main() {
     
@@ -14,7 +13,6 @@ int main() {
         printf("Child process (PID %d) is running\n", getpid());
         exit(0);
     } else {
-        wait(NULL);
         printf("Parent process (PID %d) created child process (PID %d)\n", getpid(), pid);
         sleep(20);
     }
